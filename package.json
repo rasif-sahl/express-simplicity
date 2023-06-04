@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "express": "nodemon index.js"
+    "express": "nodemon index.js",
+    "postinstall": "node scripts/setup.js"
   },
   "author": "",
   "license": "ISC",

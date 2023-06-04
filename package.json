@@ -1,7 +1,7 @@
 {
-  "name": "express-template-by-rass",
+  "name": "express-simplicity",
   "version": "1.0.0",
-  "description": "",
+  "description": "ExpressSimplicity is a unique and descriptive npm package that revolutionizes Express.js development. This comprehensive toolkit provides an intuitive and streamlined approach to building robust web applications with Express.js.",
   "type": "module",
   "main": "index.js",
   "scripts": {

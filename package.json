@@ -1,18 +1,13 @@
 {
   "name": "express-simplicity",
-  "version": "1.0.6",
+  "version": "1.0.14",
   "description": "ExpressSimplicity is a unique and descriptive npm package that revolutionizes Express.js development. This comprehensive toolkit provides an intuitive and streamlined approach to building robust web applications with Express.js.",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "express": "nodemon index.js",
-    "postinstall": "node scripts/setup.js"
+  "bin": {
+    "express-simplicity": "./setup.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.1.3",
-    "express": "^4.18.2",
-    "nodemon": "^2.0.22"
+    "mkdirp": "^3.0.1"
   }
 }

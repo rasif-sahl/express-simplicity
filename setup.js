@@ -81,7 +81,6 @@ const generateModule = () => {
         dependencies: {
           "dotenv": "^16.1.3",
           "express": "^4.18.2",
-          "mkdirp": "^3.0.1",
           "nodemon": "^2.0.22"
         },
       },

@@ -1,7 +1,14 @@
 {
   "name": "express-simplicity",
-  "version": "1.0.14",
+  "version": "1.2.0",
   "description": "ExpressSimplicity is a unique and descriptive npm package that revolutionizes Express.js development. This comprehensive toolkit provides an intuitive and streamlined approach to building robust web applications with Express.js.",
+  "keywords": [
+    "Express.js", 
+    "Template", 
+    "Boilerplate", 
+    "Code generation", 
+    "Project scaffolding"
+  ],
   "bin": {
     "express-simplicity": "./setup.js"
   },
@@ -9,5 +16,12 @@
   "license": "ISC",
   "dependencies": {
     "mkdirp": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rasif-sahl/express-simplicity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rasif-sahl/express-simplicity/issues"
   }
 }

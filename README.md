@@ -42,5 +42,10 @@ npm run express
 http://localhost:3000/
 ```
 
+## Packages
+* `dotenv`: Loads environment variables from a .env file into process.env.
+* `nodemon`: Automatically restarts the Node.js application when changes are detected in the source code.
+* `express`: A web framework for Node.js that simplifies the process of building web applications.
+
 ## License
 The Express.js Starter Kit is licensed under the ISC License.

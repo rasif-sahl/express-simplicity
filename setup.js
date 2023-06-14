@@ -1,31 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
-
-const generateFileStructure = (baseDir, structure) => {
-  Object.entries(structure).forEach(([name, content]) => {
-    const itemPath = path.join(baseDir, name);
-
-    if (typeof content === 'object') {
-      fs.mkdirSync(itemPath);
-      generateFileStructure(itemPath, content);
-    } else if (typeof content === 'string') {
-      fs.writeFileSync(itemPath, content);
-    }
-  });
-};
-
-const installDependencies = () => {
-  exec('npm install', (error, stdout, stderr) => {
-    if (error) {
-      console.error(`Error installing dependencies: ${error.message}`);
-      return;
-    }
-    console.log('Dependencies installed successfully!');
-  });
-};
+const generateFileStructure = require('./src/fileStructure.js');
+const installDependencies = require('./src/dependencies.js');
 
 const generateModule = () => {
   const baseDir = process.cwd();

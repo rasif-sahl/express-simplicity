@@ -1,5 +1,4 @@
-// dependencies.js
-const { exec } = require('child_process');
+import { exec } from 'child_process';
 
 const installDependencies = () => {
   exec('npm install', (error, stdout, stderr) => {
@@ -11,4 +10,4 @@ const installDependencies = () => {
   });
 };
 
-module.exports = installDependencies;
+export default installDependencies;

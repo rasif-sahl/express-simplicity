@@ -1,4 +1,4 @@
-const getPackageContent = () => {
+export const getPackageContent = () => {
     // Content of index.js file
     return JSON.stringify(
         {
@@ -18,8 +18,4 @@ const getPackageContent = () => {
         null,
         2
     );
-};
-
-module.exports = {
-    getPackageContent
 };

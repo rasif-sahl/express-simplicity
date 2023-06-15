@@ -1,4 +1,4 @@
-const getSrcFiles = () => {
+export const getSrcFiles = () => {
     return {
         'controllers':{
           'userControllers.js': 'console.log("All the controllers related code will be included here");',
@@ -13,8 +13,4 @@ const getSrcFiles = () => {
           'helper.js': 'console.log("All the services related files will be included here");',
         },
     }
-};
-
-module.exports = {
-    getSrcFiles
 };

@@ -1,6 +1,5 @@
-// fileStructure.js
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 const generateFileStructure = (baseDir, structure) => {
   Object.entries(structure).forEach(([name, content]) => {
@@ -15,4 +14,4 @@ const generateFileStructure = (baseDir, structure) => {
   });
 };
 
-module.exports = generateFileStructure;
+export default generateFileStructure;

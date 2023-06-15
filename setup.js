@@ -1,18 +1,21 @@
 #!/usr/bin/env node
 
-const generateFileStructure = require('./src/fileStructure.js');
-const installDependencies = require('./src/dependencies.js');
-const { getIndexContent } = require('./src/files/index.js');
-const { getPackageContent } = require('./src/files/package.js');
-const { getLandingPage } = require('./src/files/landing.js');
-const { getSrcFiles } = require('./src/files/srcFiles.js');
+import generateFileStructure from './src/fileStructure.js';
+import installDependencies from './src/dependencies.js';
+import { getIndexContent } from './src/files/index.js';
+import { 
+  getPackageContent,
+  getEnvDetails,
+ } from './src/files/global.js';
+import { getLandingPage } from './src/files/landing.js';
+import { getSrcFiles } from './src/files/srcFiles.js';
 
 const generateModule = () => {
   const baseDir = process.cwd();
   const structure = {
     'index.js': getIndexContent(),
     'src': getSrcFiles(),
-    'env-example': "",
+    'env-example': getEnvDetails(),
     'public': {
       'index.html' : getLandingPage(),
     },

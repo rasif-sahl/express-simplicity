@@ -1,4 +1,4 @@
-const getIndexContent = () => {
+export const getIndexContent = () => {
     // Content of index.js file
     return `
     import express from 'express';
@@ -13,10 +13,6 @@ const getIndexContent = () => {
     app.use(express.json())
     
     // Connection
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
     `;
-};
-
-module.exports = {
-    getIndexContent
 };

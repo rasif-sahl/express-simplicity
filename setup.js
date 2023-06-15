@@ -3,7 +3,10 @@
 import generateFileStructure from './src/fileStructure.js';
 import installDependencies from './src/dependencies.js';
 import { getIndexContent } from './src/files/index.js';
-import { getPackageContent } from './src/files/package.js';
+import { 
+  getPackageContent,
+  getEnvDetails,
+ } from './src/files/global.js';
 import { getLandingPage } from './src/files/landing.js';
 import { getSrcFiles } from './src/files/srcFiles.js';
 
@@ -12,7 +15,7 @@ const generateModule = () => {
   const structure = {
     'index.js': getIndexContent(),
     'src': getSrcFiles(),
-    'env-example': "",
+    'env-example': getEnvDetails(),
     'public': {
       'index.html' : getLandingPage(),
     },

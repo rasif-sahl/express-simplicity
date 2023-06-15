@@ -1,5 +1,4 @@
 export const getPackageContent = () => {
-    // Content of index.js file
     return JSON.stringify(
         {
           name: 'express-simplicity',
@@ -19,3 +18,9 @@ export const getPackageContent = () => {
         2
     );
 };
+
+export const getEnvDetails = () => {
+
+  return `# Express js port
+PORT=3000`
+}

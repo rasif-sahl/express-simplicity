@@ -13,6 +13,6 @@ export const getIndexContent = () => {
     app.use(express.json())
     
     // Connection
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
     `;
 };

@@ -2,23 +2,12 @@
 
 const generateFileStructure = require('./src/fileStructure.js');
 const installDependencies = require('./src/dependencies.js');
+const { getIndexContent } = require('./src/files/index.js');
 
 const generateModule = () => {
   const baseDir = process.cwd();
   const structure = {
-    'index.js':`import express from 'express';
-    import { config } from 'dotenv';
-      
-    const app = express();
-    config();
-      
-    // Middleware
-    app.use(express.static('public'))
-    app.use(express.urlencoded({extended: true}))
-    app.use(express.json())
-      
-    // Connection
-    app.listen(3000);`,
+    'index.js': getIndexContent(),
     'src': {
       'controllers':{
         'userControllers.js': 'console.log("All the controllers related code will be included here");',

@@ -24,7 +24,7 @@ export const getEnvDetails = () => {
   return `# Express js port
 PORT=3000
 
-# Database connection data
+#Database Details
 DB_HOST=
 DB_USERNAME=
 DB_PASSWORD=""
@@ -33,6 +33,5 @@ SOCKET_PATH=`
 }
 
 export const getConfigDetails = () => {
-
   return `console.log("All the services related files will be included here");`
 }

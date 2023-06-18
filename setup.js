@@ -16,7 +16,7 @@ const generateModule = () => {
   const structure = {
     'index.js': getIndexContent(),
     'src': getSrcFiles(),
-    'env-example': getEnvDetails(),
+    'env-example.txt': getEnvDetails(),
     'public': {
       'index.html' : getLandingPage(),
     },

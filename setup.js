@@ -6,6 +6,7 @@ import { getIndexContent } from './src/files/index.js';
 import { 
   getPackageContent,
   getEnvDetails,
+  getConfigDetails,
  } from './src/files/global.js';
 import { getLandingPage } from './src/files/landing.js';
 import { getSrcFiles } from './src/files/srcFiles.js';
@@ -15,12 +16,12 @@ const generateModule = () => {
   const structure = {
     'index.js': getIndexContent(),
     'src': getSrcFiles(),
-    'env-example': getEnvDetails(),
+    'env-example.txt': getEnvDetails(),
     'public': {
       'index.html' : getLandingPage(),
     },
     'config' : {
-      'config.js' : 'console.log("Configuration related code will be added here (DB configuration)");',
+      'config.js' : getConfigDetails(),
     },
     'package.json': getPackageContent(),
   };

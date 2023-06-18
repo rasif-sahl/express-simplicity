@@ -9,8 +9,11 @@ export const getSrcFiles = () => {
         'routes':{
           'userRoutes.js': 'console.log("All the routes related files will be included here");',
         },
-        'userServices':{
+        'services':{
           'helper.js': 'console.log("All the services related files will be included here");',
+        },
+        'middleware':{
+          'auth.js': 'console.log("All the authentication related files will be included here");',
         },
     }
 };

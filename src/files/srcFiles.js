@@ -1,7 +1,5 @@
-export const getSrcFiles = () => {
-    return {
-        'controllers':{
-          'userControllers.js': `import { 
+const controllers = () => {
+  return `import { 
   userList,
 } from '../models/userModels.js';
 
@@ -18,7 +16,7 @@ export const getSrcFiles = () => {
             }
         });
     } 
- * 
+  * 
 */
 
 export function getUserList(req, res) {
@@ -27,10 +25,11 @@ export function getUserList(req, res) {
 
 export function postUserList(req, res) {
     res.send(req.params.id);
-}`,
-        },
-        'models':{
-          'userModels.js': `/**
+}`
+}
+
+const models = () => {
+  return `/**
 * Database Connection
 * 
 * You can use this variable any where in your application.
@@ -65,10 +64,12 @@ export function userList() {
   ]
 
   return userList;
-}`,
-        },
-        'routes':{
-          'api.js':`import express from 'express';
+}`
+}
+
+const routes = () => {
+  return {
+    'api.js':`import express from 'express';
 import userRoutes from './users.js';
 // import other route files as needed
 
@@ -80,10 +81,10 @@ api.use('/users', userRoutes);
 
 export default api;`,
 
-          'users.js': `import { Router } from 'express';
+    'users.js': `import { Router } from 'express';
 import { 
-    getUserList,
-    postUserList,
+getUserList,
+postUserList,
 } from '../controllers/userControllers.js';
 
 // Declaring the router
@@ -94,7 +95,18 @@ router.get('/', getUserList);
 router.get('/:id', postUserList);
 
 export default router`,
+  }
+}
+
+export const getSrcFiles = () => {
+    return {
+        'controllers':{
+          'userControllers.js': controllers(),
         },
+        'models':{
+          'userModels.js': models(),
+        },
+        'routes': routes(),
         'services':{
           'helper.js': 'console.log("All the services related files will be included here");',
         },

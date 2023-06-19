@@ -47,13 +47,14 @@ http://localhost:3000/
 * `nodemon`: Automatically restarts the Node.js application when changes are detected in the source code.
 * `express`: A web framework for Node.js that simplifies the process of building web applications. you can access the api routes similarly.
 
+## Additional Comments
+* Change the `env-example.txt` file to `.env` to enable the usage of environment variables in your project.
+* I have added some boilerplate code in the controllers, models and routes folder. I have use the `MVC architecture` in this.
+
 ```bash
 http://localhost:3000/api/users
 http://localhost:3000/api/users/5
 ```
 
-## Additional Comments
-* Change the `env-example.txt` file to `.env` to enable the usage of environment variables in your project.
-* I have added some boilerplate code in the controllers, models and routes folder. I have use the `MVC architecture` in this.
 ## License
 The Express.js Starter Kit is licensed under the ISC License.

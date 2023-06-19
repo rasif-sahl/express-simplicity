@@ -11,7 +11,8 @@ export const getPackageContent = () => {
           dependencies: {
             "dotenv": "^16.1.3",
             "express": "^4.18.2",
-            "nodemon": "^2.0.22"
+            "nodemon": "^2.0.22",
+            "mysql": "^2.18.1",
           },
         },
         null,
@@ -33,5 +34,27 @@ SOCKET_PATH=`
 }
 
 export const getConfigDetails = () => {
-  return `console.log("All the services related files will be included here");`
+  return `import { createConnection } from 'mysql';
+import { config } from 'dotenv';
+
+config()
+
+const connection = createConnection({
+  host : process.env.DB_HOST,
+  database : process.env.DB_NAME,
+  user : process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  socketPath: process.env.SOCKET_PATH,
+});
+
+connection.connect(function(error){
+  if(error){
+    throw error
+  }
+  else{
+    console.log('Express Simplicity Application Has Been Successfully connected to the database')
+  }
+});
+
+export default connection;`
 }

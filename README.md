@@ -8,6 +8,9 @@ Jumpstart your Express.js and Node.js projects with the Express.js Starter Kit. 
 - **Essential NPM Packages**: Save time and effort by having commonly used npm packages for Express.js, such as nodemon, express, and dotenv, automatically installed. These packages enhance security and streamline your development process.
 - **Best Practices and Sample Code**: The Starter Kit includes sample code and configuration files that follow best practices, allowing you to start building your application immediately.
 
+## Requirements
+* `Node js` should be installed.
+* `npm` or `yarn` should be installed.
 ## Installation
 
 To get started, 
@@ -46,6 +49,7 @@ http://localhost:3000/
 * `dotenv`: Loads environment variables from a .env file into process.env.
 * `nodemon`: Automatically restarts the Node.js application when changes are detected in the source code.
 * `express`: A web framework for Node.js that simplifies the process of building web applications. you can access the api routes similarly.
+* `mysql`: The MySQL Node package: Simplifying MySQL database interactions in Node.js.
 
 ## Additional Comments
 * Change the `env-example.txt` file to `.env` to enable the usage of environment variables in your project.
@@ -55,6 +59,18 @@ http://localhost:3000/
 http://localhost:3000/api/users
 http://localhost:3000/api/users/5
 ```
+* To connect this application to the database you can replace these .env variables with your db credentials.
+
+```bash
+DB_HOST=
+DB_USERNAME=
+DB_PASSWORD=""
+DB_NAME=
+
+# If you are getting any unexpected errors you can add the socket path to
+SOCKET_PATH=
+```
+* I have added comments on the `userModels` files and the `userController` file on how to get data from the database once the db is connected.
 
 ## License
 The Express.js Starter Kit is licensed under the ISC License.
